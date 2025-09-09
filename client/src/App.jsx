@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="text-center text-4xl">
-        Hey this is landing page. This change is done by HARMEET
+        Hey this is landing page. This change is done by ANUBHAB
       </div>
     </>
   )
