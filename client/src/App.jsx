@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="text-center text-4xl">
-        Hey 
+        Hey this is landing page
       </div>
     </>
   )
