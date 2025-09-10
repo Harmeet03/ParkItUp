@@ -9,10 +9,7 @@ function App() {
   return (
     <>
       <div className="text-center text-4xl">
-        Hey this is landing page. This change is done by Anubhab for Harmeet
-      </div>
-      <div>
-        Harmeet's favourite song is Saiyaara
+        Landing Page
       </div>
     </>
   )
