@@ -1,1 +1,8 @@
-const testing = null
+const Chat  = () => {
+    return(
+        <>
+        </>
+    )
+}
+
+export default Chat
