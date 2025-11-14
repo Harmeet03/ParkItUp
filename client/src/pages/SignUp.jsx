@@ -1,9 +1,53 @@
 import car from '../assets/car3.png'
 import brand from '../assets/brand.png'
 import { useNavigate } from 'react-router'
-
+import { register } from '../services/authAPI'
+import { useState } from 'react'
 
 const SignUp = () => {
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [form, setForm] = useState({
+        name: '',
+        username: '',
+        email: '',
+        password: ''
+    })
+    
+    const handleChange = (e) => {
+        const {name, value} = e.target
+        setForm((prev) => ({
+            ...prev,
+            [name]: value
+        }))
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setLoading(true);
+
+        try{
+            const res = await register(form)
+            setError(false)
+            setLoading(false)
+
+            if(res.role === 'admin'){
+                to('/admin/dashboard')
+                setLoading(false);
+            }
+            else{
+                to('/dashboard')
+                setLoading(false);
+            }
+        }
+
+        catch(e){
+            console.log('Registration failed')
+            setError(true)
+            setLoading(false)
+        }
+    }
+
     const to = useNavigate()
     return(
         <div className="bg-gray-200 w-full h-screen flex">
@@ -18,12 +62,19 @@ const SignUp = () => {
                             <p className='text-4xl text-left py-4'> Signup </p>
                             <img src={brand} width={60} className='py-4'/>
                         </div>
-                        <form className='flex flex-col gap-4 py-8'>
-                            <input required className='bg-white py-2 px-4' type='text' name='name' placeholder='Name'/>
-                            <input required className='bg-white py-2 px-4' type='text' name='email' placeholder='Email'/>
-                            <input required className='bg-white py-2 px-4' type='password' name='password' placeholder='Password'/>
-                            <button className='bg-cyan-600 py-2 px-4 rounded-lg text-white cursor-pointer hover:scale-90 transition cursor-pointer'> Signup </button>
+                        <form className='flex flex-col gap-4 py-8' onSubmit={handleSubmit}>
+                            <input required className='bg-white py-2 px-4' onChange={handleChange} value={form.name} type='text' name='name' placeholder='Name'/>
+                            <input required className='bg-white py-2 px-4' onChange={handleChange} value={form.username} type='text' name='username' placeholder='Username'/>
+                            <input required className='bg-white py-2 px-4' onChange={handleChange} value={form.email} type='text' name='email' placeholder='Email'/>
+                            <input required className='bg-white py-2 px-4' onChange={handleChange} value={form.password} type='password' name='password' placeholder='Password'/>
+                            {loading ? (
+                                <button disabled className='bg-gray-400 py-2 px-4 rounded-lg text-white cursor-not-allowed'> Loading... </button>
+                            ):
+                            (
+                                <button className='bg-cyan-600 py-2 px-4 rounded-lg text-white cursor-pointer hover:scale-90 transition cursor-pointer'> Signup </button>
+                            )}
                             <p className='text-sm'> Already have an account? <span className='underline cursor-pointer' onClick={() => to('/sign_in')}> Sign In </span> </p>
+                            {error && <p className='text-red-500 text-sm'> Something went wrong. </p>}
                         </form>
                     </div>
                 </div>
