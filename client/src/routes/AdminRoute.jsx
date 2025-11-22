@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { profile } from "../services/profileAPI";
 import { Navigate } from "react-router";
+import image  from "../assets/loading.png"
 
 const AdminRoute = ({children}) => {
     const [admin, setAdmin] = useState(false);
@@ -31,6 +32,7 @@ const AdminRoute = ({children}) => {
     if(loading){
         return(
             <div className="text-4xl flex flex-col justify-center items-center h-screen">
+                <img src={image}/>
                 <p> Loading... </p>
             </div>
         )

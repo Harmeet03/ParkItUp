@@ -54,7 +54,7 @@ const SignIn = () => {
             {/* <div className="bg-white md:bg-blue-400 w-9/10 h-9/10 m-auto rounded-lg justify-center items-center flex"> */}
                 <div className="flex text-center md:gap-8 lg:gap-16 sm:flex-row sm:justify-center items-center m-auto md:w-215 py-10 px-5">
                     <div>
-                        <img src={car} className="hidden md:block md:w-90 lg:w-100 rounded-xl md:h-75 md:rounded-4xl"/>
+                        <img src={car} className="hidden md:block md:w-90 lg:w-80 rounded-xl md:h-75 md:rounded-4xl"/>
                     </div>
                     <div className='py-4 px-10 md:px-6 lg:px-10 rounded-xl bg-gray-100'>
                         <div className='flex justify-between items-center'>

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { profile } from "../services/profileAPI";
 import { Navigate } from "react-router";
+import image  from "../assets/loading.png"
+
 
 const ProtectedRoute = ({children}) => {
     const [redirect, setRedirect] = useState(false);
@@ -25,6 +27,7 @@ const ProtectedRoute = ({children}) => {
     if(loading){
         return(
             <div className="text-4xl flex flex-col justify-center items-center h-screen">
+                <img src={image}/>
                 <p> Loading... </p>
             </div>
         )
