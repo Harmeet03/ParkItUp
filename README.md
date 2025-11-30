@@ -3,4 +3,4 @@ A Parking Slot Booking System using MERN with auth system & sessions using JWT T
 
 📄 License MIT
 
-✨ Author Harmeet Singh 📧 harmeet.dhanajal2003@gmail.com
+✨ Author Harmeet Singh 📧 harmeet.dhanjal2003@gmail.com
