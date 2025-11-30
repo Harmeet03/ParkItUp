@@ -1,5 +1,5 @@
 const allowedOrigins = [ 
-    'http://localhost:5173'
+    'https://parkitup-app.netlify.app'
 ] 
 
 export const corsOptions = {

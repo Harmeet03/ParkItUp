@@ -8,7 +8,9 @@ const Landing  = () => {
       <>
         <div className="bg-gray-200 w-full h-screen flex">
             <div className="bg-white w-9/10 h-9/10 m-auto overflow-y-scroll rounded-lg p-5">
-                
+  
+              <p className='text-center p-1 px-4 mb-4 bg-cyan-600 text-white rounded-2xl'> We are currently serving at <span className='underline cursor-pointer'> DDA Park, near IITM College, Janakpuri </span> only.</p>
+              
               <Navbar/>
 
               <div className="flex flex-col-reverse text-center gap-4 sm:flex-row sm:justify-center items-center m-auto lg:w-215 py-10">

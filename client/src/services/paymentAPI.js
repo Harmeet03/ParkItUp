@@ -1,4 +1,4 @@
-import api from "./api";
+    import api from "./api";
 
 export const createOrder = async (slotId) => {
     const res = await api.post(`/slot/payment/checkout`, {slotId})
