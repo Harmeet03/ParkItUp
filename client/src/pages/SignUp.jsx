@@ -67,6 +67,7 @@ const SignUp = () => {
                             <input required className='bg-white py-2 px-4' onChange={handleChange} value={form.username} type='text' name='username' placeholder='Username'/>
                             <input required className='bg-white py-2 px-4' onChange={handleChange} value={form.email} type='text' name='email' placeholder='Email'/>
                             <input required className='bg-white py-2 px-4' onChange={handleChange} value={form.password} type='password' name='password' placeholder='Password'/>
+                            <p> Read <span onClick={() => to('/conditions')} className='text-cyan-600 italic cursor-pointer'>Terms and Conditions.</span> </p>
                             {loading ? (
                                 <button disabled className='bg-gray-400 py-2 px-4 rounded-lg text-white cursor-not-allowed'> Loading... </button>
                             ):

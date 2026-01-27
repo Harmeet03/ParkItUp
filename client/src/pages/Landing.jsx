@@ -53,6 +53,11 @@ const Landing  = () => {
                 </div>
               </div>
             
+              <div className='text-center p-1 px-4 mt-4 bg-cyan-600 text-white rounded-2xl'> 
+                <span className='underline cursor-pointer text-xl' onClick={() => to('/conditions')}> Terms and Conditions </span><br/>
+                <p> This website is for demonstration of my skills purpose only. No copyright intended </p>
+              </div>
+
             </div>
         </div>
       </>

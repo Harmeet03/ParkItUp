@@ -64,6 +64,7 @@ const SignIn = () => {
                         <form className='flex flex-col gap-4 py-8' onSubmit={handleSubmit}>
                             <input required onChange={handleChange} value={form.email} className='bg-white py-2 px-4' type='text' name='email' placeholder='Email'/>
                             <input required onChange={handleChange} value={form.password} className='bg-white py-2 px-4' type='password' name='password' placeholder='Password'/>
+                            <p> Read <span onClick={() => to('/conditions')} className='text-cyan-600 italic cursor-pointer'>Terms and Conditions.</span> </p>
                             {loading ? (
                                 <button disabled className='bg-gray-400 py-2 px-4 rounded-lg text-white cursor-not-allowed'> Loading... </button>
                             ):

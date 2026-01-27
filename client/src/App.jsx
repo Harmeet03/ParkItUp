@@ -9,6 +9,7 @@ import NetworkStatus from './components/NetworkStatus'
 import Landing from './pages/Landing'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
+import Conditions from './pages/Conditions'
 
 import ProtectedRoute from './routes/ProtectedRoute'
 import PublicRoute from './routes/PublicRoute'
@@ -61,8 +62,8 @@ function App() {
           </PublicRoute>
         }/>
 
-        <Route path='/chat' element={
-            <Chat/>
+        <Route path='/conditions' element={
+          <Conditions/>
         }/>
 
         {/* USER ONLY LINKS */}
