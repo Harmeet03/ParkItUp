@@ -27,6 +27,10 @@ app.use(cookieParser())
 app.get("/", (req, res) => {
     res.send("Welcome to ParkItUp API");
 });
+
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'OK', message: 'Server is healthy' });
+});
     
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
