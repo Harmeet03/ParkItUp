@@ -9,12 +9,14 @@ ParkItUp is a full-stack parking slot booking management system that allows user
 - `JWT Auth`
 - `Tailwind CSS 4`
 - `Vite`
+- `Razorpay API` (Payment Gateway)
 
 ## 🚀 FEATURES
 - Real-time parking slot booking system
 - Backend API for slot management
 - Full-stack integration using MERN architecture
 - Role-Based Access Control: User role based interfaces (user, admin)
+- Integrated RazorPay's Secure Payment Gateway for slot booking.
 
 ## 📍 THE PROCESS
 I created this project to practice building a real-world full-stack application using the MERN stack. The goal was to understand how frontend and backend communicate, how data is stored in MongoDB, and how booking logic can be implemented using APIs.
