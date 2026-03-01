@@ -1,7 +1,7 @@
 # ParkItUp (Parking Slot Booking Management System)
 ParkItUp is a full-stack parking slot booking management system that allows users to check parking availability and reserve slots through a web interface. The project demonstrates a complete frontend–backend workflow including API handling, state management, and dynamic slot allocation.
 
-## ✨ TECHNOLOGIES
+## ✨ TECHNOLOGIES 
 - `React.js`
 - `Node.js`
 - `Express.js`
