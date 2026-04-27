@@ -18,8 +18,20 @@ ParkItUp is a full-stack parking slot booking management system that allows user
 - Role-Based Access Control: User role based interfaces (user, admin)
 - Integrated RazorPay's Secure Payment Gateway for slot booking.
 
-## 📍 THE PROCESS
-I created this project to practice building a real-world full-stack application using the MERN stack. The goal was to understand how frontend and backend communicate, how data is stored in MongoDB, and how booking logic can be implemented using APIs.
+## 💡 Why ParkItUp?
+Parking management at malls, offices, and residential complexes is still
+handled manually or through outdated systems. ParkItUp solves this with
+a real-time, web-based booking system where admins manage slots and users
+book & pay instantly — no phone calls, no guesswork.
+
+## ⚙️ Environment Variables
+Create a `.env` file in /server with:
+
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+RAZORPAY_KEY_ID=your_razorpay_key
+RAZORPAY_KEY_SECRET=your_razorpay_secret
+PORT=5000
 
 ## 🚦 RUNNING THE PROJECT
 - Clone the repository  
